@@ -27,14 +27,16 @@
             <div class="col-md-7 col-lg-7" style="height: 450px; overflow: scroll;">
                 <!-- List of all the tasks for the day -->
                 <div class="card m-1">
-                    <div class="card-body">
-                        This is some Task
-                        <span style="position: relative; float: right;">
-                            <a class="btn btn-success"><i class="fa fa-check"></i> Mark as Done</a>
-                            <a class="btn btn-danger"><i class="fa fa-trash"></i></a>
-                            <a class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                        </span>
-                    </div>
+                    {% for t in tasks %}
+                        <div class="card-body">
+                            {{ t.task }}        
+                            <span style="position: relative; float: right;">
+                                <a class="btn btn-success"><i class="fa fa-check"></i> Mark as Done</a>
+                                <a class="btn btn-danger"><i class="fa fa-trash"></i></a>
+                                <a class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                            </span>
+                        </div>
+                    {% endfor %}
                 </div>
                
             </div>
